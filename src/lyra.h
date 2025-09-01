@@ -78,6 +78,11 @@ string *string_concat_str(string *s, const string *s2);
 string *string_concat_cstr(string *s, const char *str2);
 string *string_concat_wcstr(string *s, const wchar_t *wcstr2);
 
+
+string *string_concat_vstr(string *s, const string *s2, ...);
+string *string_concat_vcstr(string *s, const char *s2, ...);
+string *string_concat_vwcstr(string *s, const wchar_t *s2, ...);
+
 unsigned long string_getlength(string *s);
 void string_free(string *s);
 
@@ -116,3 +121,4 @@ void file_free(filebuf *fb);
 map *map_new(map *m, unsigned int k_nmemb, unsigned int v_nmemb);
 map *map_add(map *m, void *key, void *value, unsigned long k_len, unsigned long v_len);
 map *map_remove(map *m, void *key, unsigned long k_len); //how tf to even do this lmao
+
